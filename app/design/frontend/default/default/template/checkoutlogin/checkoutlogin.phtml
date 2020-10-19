@@ -1,0 +1,81 @@
+<h4><?php echo $this->__('Login') ?></h4>
+
+<!--Form Tittle-->
+<div class="page-title">
+</div>
+<!--Form Information-->
+<form id="person-form-validate" method="post" action="<?php echo $this->getActionOfForm()?>">
+<div class="fieldset">
+<h2 class="legend"><?php echo $this->__('Person Information')?></h2>
+<ul class="form-list">
+<li class="fields">
+<div class="customer-name">
+<div class="field name-firstname">
+<label class="required" for="firstname"><em>*</em><?php echo $this->__('Email')?></label>
+<div class="input-box">
+<input type="text" class="input-text required-entry" maxlength="255" title="Email" value="" name="email" id="email">
+</div>
+</div>
+<div class="field birthday">
+<label class="required" for="birthday"><em>*</em><?php echo $this->__('Password')?></label>
+<div class="input-box">
+<input type="text" class="input-text required-entry" maxlength="255" title="Password" value="" name="password" id="password">
+</div>
+</div>
+</div>
+</li>
+
+</ul>
+</div>
+<!--Button & Link-->
+<div class="buttons-set">
+<p class="required">* <?php echo $this->__('Required Fields')?></p>
+<p class="back-link"><a class="back-link" href="<?php echo $this->getBaseUrl();?>"><small>&laquo;</small>Back</a></p>
+<button class="button" title="Submit" type="submit"><span><span><?php echo $this->__('Submit')?></span></span></button>
+</div>
+</form>
+<br>
+<h4><?php echo $this->__('Customer Detail') ?></h4>
+<table id="my-person-table" class="data-table">
+<colgroup>
+<col width="1">
+<col>
+<col width="1">
+<col width="1">
+<col>
+</colgroup>
+<thead>
+<tr class="first last">
+<th><?php echo $this->__('No.')?></th>
+<th><?php echo $this->__('Firstname')?></th>
+<th><?php echo $this->__('Lastname')?></th>
+<th><?php echo $this->__('Company')?></th>
+<th><?php echo $this->__('Street')?></th>
+<th><?php echo $this->__('City')?></th>
+<th><?php echo $this->__('Region')?></th>
+<th><?php echo $this->__('PostCode')?></th>
+<th><?php echo $this->__('Country_id')?></th>
+<th><?php echo $this->__('Telephone')?></th>
+<th><?php echo $this->__('Fax')?></th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><?php echo $this->getData_tbl()['customer_id']?></td>
+<td><?php echo $this->getData_tbl()['firstname']?></td>
+<td><?php echo $this->getData_tbl()['lastname']?></td>
+<td><?php echo $this->getData_tbl()['company']?></td>
+<td><?php echo $this->getData_tbl()['street']?></td>
+<td><?php echo $this->getData_tbl()['city']?></td>
+<td><?php echo $this->getData_tbl()['region']?></td>
+<td><?php echo $this->getData_tbl()['postcode']?></td>
+<td><?php echo $this->getData_tbl()['country_id']?></td>
+<td><?php echo $this->getData_tbl()['telephone']?></td>
+<td><?php echo $this->getData_tbl()['fax']?></td>
+</tr>
+
+</tbody>
+</table>
+
+            

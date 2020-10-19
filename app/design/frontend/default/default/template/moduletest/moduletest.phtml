@@ -1,0 +1,145 @@
+<h4><?php echo $this->__('Module Test') ?></h4>
+
+<!--Form Tittle-->
+<div class="page-title">
+<?php echo $this->getData_tbl()['email']?>
+</div>
+<!--Form Information-->
+<form id="person-form-validate" method="post" action="<?php echo $this->getActionOfForm()?>">
+<div class="fieldset">
+<h2 class="legend"><?php echo $this->__('Person Information')?></h2>
+<ul class="form-list">
+<li class="fields">
+<div class="customer-name">
+<div class="field name-firstname">
+<label class="required" for="firstname"><em>*</em><?php echo $this->__('Email')?></label>
+<div class="input-box">
+<input type="text" class="input-text required-entry" maxlength="255" title="Name" value="" name="name" id="name">
+</div>
+</div>
+<div class="field birthday">
+<label class="required" for="birthday"><em>*</em><?php echo $this->__('Password')?></label>
+<div class="input-box">
+<input type="text" class="input-text required-entry" maxlength="255" title="Birthday" value="" name="birthday" id="birthday">
+</div>
+</div>
+</div>
+</li>
+
+</ul>
+</div>
+<!--Button & Link-->
+<div class="buttons-set">
+<p class="required">* <?php echo $this->__('Required Fields')?></p>
+<p class="back-link"><a class="back-link" href="<?php echo $this->getBaseUrl();?>"><small>&laquo;</small>Back</a></p>
+<button class="button" title="Submit" type="submit"><span><span><?php echo $this->__('Submit')?></span></span></button>
+</div>
+</form>
+<table id="my-person-table" class="data-table">
+<colgroup>
+<col width="1">
+<col>
+<col width="1">
+<col width="1">
+<col>
+</colgroup>
+<thead>
+<tr class="first last">
+<th><?php echo $this->__('No.')?></th>
+<th><?php echo $this->__('Firstname')?></th>
+<th><?php echo $this->__('Lastname')?></th>
+<th><?php echo $this->__('Company')?></th>
+<th><?php echo $this->__('Street')?></th>
+<th><?php echo $this->__('City')?></th>
+<th><?php echo $this->__('Region')?></th>
+<th><?php echo $this->__('PostCode')?></th>
+<th><?php echo $this->__('Country_id')?></th>
+<th><?php echo $this->__('Telephone')?></th>
+<th><?php echo $this->__('Fax')?></th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><?php echo $this->getData_tbl()['customer_id']?></td>
+<td><?php echo $this->getData_tbl()['firstname']?></td>
+<td><?php echo $this->getData_tbl()['lastname']?></td>
+<td><?php echo $this->getData_tbl()['company']?></td>
+<td><?php echo $this->getData_tbl()['street']?></td>
+<td><?php echo $this->getData_tbl()['city']?></td>
+<td><?php echo $this->getData_tbl()['region']?></td>
+<td><?php echo $this->getData_tbl()['postcode']?></td>
+<td><?php echo $this->getData_tbl()['country_id']?></td>
+<td><?php echo $this->getData_tbl()['telephone']?></td>
+<td><?php echo $this->getData_tbl()['fax']?></td>
+</tr>
+
+</tbody>
+</table>
+
+            <?php
+                
+                /*
+                    This shows how to load specific fields from a record in the database.
+                    1) Note the load(15), this corresponds to saying "select * from table where table_id = 15"
+                    2) You can then just use the get(fieldname) to pull specific data from the table.
+                    3) If you have a field named news_id, then it becomes getNewsId, etc.
+                */
+                /*
+                $news = Mage::getModel('moduletest/moduletest')->load(15);
+                echo $news->getNewsId();
+                echo $news->getTitle();
+                echo $news->getContent();
+                echo $news->getStatus();
+                */
+                
+                /*
+                    This shows an alternate way of loading datas from a record using the database the "Magento Way" (using blocks and controller).
+ 					Uncomment blocks in /app/code/local/Namespace/Module/controllers/IndexController.php if you want to use it.
+
+               */
+                /*
+                $object = $this->getModuletest();
+                echo 'id: '.$object['test_id'].'<br/>';
+				echo 'title: '.$object['title'].'<br/>';
+				echo 'content: '.$object['content'].'<br/>';
+				echo 'status: '.$object['status'].'<br/>';
+                */            
+            
+            
+                /*
+                    This shows how to load multiple rows in a collection and save a change to them.
+                    1) The setPageSize function will load only 5 records per page and you can set the current Page with the setCurPage function.
+                    2) The $collection->walk('save') allows you to save everything in the collection after all changes have been made.
+                */
+                /*
+                $i = 0;
+                
+                $collection = Mage::getModel('moduletest/moduletest')->getCollection();
+                $collection->setPageSize(5);
+                $collection->setCurPage(2);
+                $size = $collection->getSize();
+                $cnt = count($collection);
+                foreach ($collection as $item) {
+                    $i = $i+1;
+                    $item->setTitle($i);
+                    echo $item->getTitle();
+                }
+
+                $collection->walk('save');
+                */
+                
+                /*
+                    This shows how to load a single record and save a change.
+                    1) Note the setTitle, this corresponds to the table field name, title, and then you pass it the text to change.
+                    2) Call the save() function only on a single record.
+                */
+                /*
+                $object = Mage::getModel('moduletest/moduletest')->load(1);
+                $object->setTitle('This is a changed title');
+                $object->save();
+				*/
+                
+
+            ?> 
+            

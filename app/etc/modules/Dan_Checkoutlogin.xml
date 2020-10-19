@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Dan_Checkoutlogin>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Dan_Checkoutlogin>
+    </modules>
+</config> 
