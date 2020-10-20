@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Dan_Checkoutlogin>
+        <Noodle_Checkoutlogin>
             <active>true</active>
             <codePool>local</codePool>
-        </Dan_Checkoutlogin>
+        </Noodle_Checkoutlogin>
     </modules>
 </config> 

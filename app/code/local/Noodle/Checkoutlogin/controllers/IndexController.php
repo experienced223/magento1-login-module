@@ -1,5 +1,5 @@
 <?php
-class Dan_Checkoutlogin_IndexController extends Mage_Core_Controller_Front_Action
+class Noodle_Checkoutlogin_IndexController extends Mage_Core_Controller_Front_Action
 {
 	protected function _getSession()
     {

@@ -1,5 +1,5 @@
 <?php
-class Dan_Checkoutlogin_Block_Checkoutlogin extends Mage_Core_Block_Template
+class Noodle_Checkoutlogin_Block_Checkoutlogin extends Mage_Core_Block_Template
 {
 	public function _prepareLayout()
     {

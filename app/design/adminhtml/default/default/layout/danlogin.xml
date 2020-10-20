@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<layout version="0.1.0">
-    <danlogin_adminhtml_danlogin_index>
-        <reference name="content">
-            <block type="danlogin/adminhtml_danlogin" name="danlogin" />
-        </reference>
-    </danlogin_adminhtml_danlogin_index>
-</layout>

@@ -1,6 +1,6 @@
 <?php
 
-class Dan_Checkoutlogin_Model_Checkoutlogin extends Mage_Core_Model_Abstract
+class Noodle_Checkoutlogin_Model_Mysql4_Checkoutlogin_Collection extends Mage_Core_Model_Mysql4_Collection_Abstract
 {
     public function _construct()
     {

@@ -1,6 +1,6 @@
 <?php
 
-class Dan_Checkoutlogin_Model_Status extends Varien_Object
+class Noodle_Checkoutlogin_Model_Status extends Varien_Object
 {
     const STATUS_ENABLED	= 1;
     const STATUS_DISABLED	= 2;
