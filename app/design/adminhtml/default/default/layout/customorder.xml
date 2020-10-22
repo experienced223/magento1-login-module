@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <customorder_adminhtml_customorder_index>
+        <reference name="content">
+            <block type="customorder/adminhtml_customorder" name="customorder" />
+        </reference>
+    </customorder_adminhtml_customorder_index>
+</layout>

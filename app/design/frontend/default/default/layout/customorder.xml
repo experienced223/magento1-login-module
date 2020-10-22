@@ -2,12 +2,12 @@
 <layout version="0.1.0">
     <default>
     </default>
-    <checkoutlogin_index_index>
+    <customorder_index_index>
         <reference name="root">
             <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
         </reference>
         <reference name="content">
-            <block type="checkoutlogin/checkoutlogin" name="checkoutlogin" template="checkoutlogin/checkoutlogin.phtml" />
+            <block type="customorder/customorder" name="customorder" template="customorder/customorder.phtml" />
         </reference>
-    </checkoutlogin_index_index>
+    </customorder_index_index>
 </layout> 

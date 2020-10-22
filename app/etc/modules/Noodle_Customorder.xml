@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Noodle_Checkoutlogin>
+        <Noodle_customorder>
             <active>true</active>
             <codePool>local</codePool>
-        </Noodle_Checkoutlogin>
+        </Noodle_customorder>
     </modules>
 </config> 
