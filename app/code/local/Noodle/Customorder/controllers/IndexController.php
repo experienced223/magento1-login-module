@@ -48,23 +48,7 @@ class Noodle_customorder_IndexController extends Mage_Core_Controller_Front_Acti
 		$this->loadLayout();     
 		$this->renderLayout();
 	}
-	public function loginAction()
-	{
-		$session = $this->_getSession();
-		if ($this->_getSession()->isLoggedIn()) {
-			
-			echo "Login already!";
-        }else{
-			$email = $this->getRequest()->getParam('email');
-			$password = $this->getRequest()->getParam('password');
-			if ($session->login($email, $password)) {
-				echo "Login success!";
-			}else{
-				echo "Login failed!";
-			}
-		}
-		$this->_redirect('customorder/index/index');
-	}
+	
 
 	public function setorderAction()
 	{
